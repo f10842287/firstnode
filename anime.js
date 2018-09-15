@@ -5,7 +5,7 @@ const rl = readline.createInterface({
 	input:process.stdin,
 	output:process.stdout
 });
-rl.question('輸入你要查的動漫\n',(name)=>{
+rl.question('輸入你要查的動漫名稱\n',(name)=>{
 	const url = `https://www.eyny.com/channel/UCYrHXcc_kb/tag/${name}/&orderby=date`
 	const encodeurl = encodeURI(url)
 	request(encodeurl,(err,res,body)=>{
